@@ -1,0 +1,42 @@
+{% include "header.html" %}
+
+<header class="site-header d-flex flex-column justify-content-center align-items-center">
+    <div class="col-lg-12 col-12 text-center">
+                <h2 class="mb-5">Create Pet Profile</h2>
+    </div>
+</header>
+
+<section class="section-padding section-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                <form action="/add_pet/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="petName" class="form-label">Pet Name</label>
+                        <input type="text" class="form-control" id="petName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="petAge" class="form-label">Pet Age</label>
+                        <input type="number" class="form-control" id="petAge" name="age" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="petBreed" class="form-label">Pet Breed</label>
+                        <input type="text" class="form-control" id="petBreed" name="breed" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="petDescription" class="form-label">Owner Description</label>
+                        <textarea class="form-control" id="petDescription" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="petPhoto" class="form-label">Pet Photo</label>
+                        <input type="file" class="form-control" id="petPhoto" name="photo" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "footer.html" %}
