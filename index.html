@@ -8,9 +8,9 @@
                         <div class="col-lg-8 col-12 mx-auto">
                             <h1 class="text-white text-center">Care Through PetPal</h1>
 
-                            <h6 class="text-center">Care . Adoption . Consultation</h6>
+                            <h4 class="text-center">Care & Adoption</h4>
 
-                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                            {% comment %} <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text bi-search" id="basic-addon1">
                                         
@@ -20,7 +20,7 @@
 
                                     <button type="submit" class="form-control">Search</button>
                                 </div>
-                            </form>
+                            </form> {% endcomment %}
                         </div>
 
                     </div>
@@ -28,7 +28,7 @@
             </section>
 
 
-            <section class="featured-section">
+            {% comment %} <section class="featured-section">
                 <div class="container">
                     <div class="row justify-content-center">
 
@@ -57,9 +57,9 @@
 
                                     <div class="custom-block-overlay-text d-flex">
                                         <div>
-                                            <h5 class="text-white mb-2">Online Consultation</h5>
+                                            <h4 class="text-white mb-2">Doctor Apointment Booking</h4>
 
-                                            <p class="text-white">Hello Pet lovers! Here is our platform PetPal gives you free veterinary Consultancy service. Doctor available here to give you any kind of emergency consultation online.</p>
+                                            <p class="text-white">Hello Pet lovers! Here is our platform PetPal gives you online Veterinary Doctor Booking service. Now you can book Doctors appointment online</p>
 
                                             <a href="#section_3" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
                                         </div>
@@ -94,16 +94,16 @@
 
                     </div>
                 </div>
-            </section>
+            </section> {% endcomment %}
 
 
             <section class="explore-section section-padding" id="section_2">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-12 text-center">
+                        {% comment %} <div class="col-12 text-center">
                             <h2 class="mb-4">Services</h2>
-                        </div>
+                        </div> {% endcomment %}
 
                     </div>
                 </div>
@@ -119,8 +119,8 @@
                                 <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Care-Giver</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Consultant</button>
+                            {% comment %} <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Doctors</button> {% endcomment %}
                             </li>
                         </ul>
                     </div>
@@ -143,6 +143,8 @@
                                                             <h5 class="mb-2">
                                                                 {{pet.name}}
                                                             </h5>
+                                                            
+                                                            <p class="text-muted">📍{{ pet.location }}</p>
 
                                                             <p class="mb-0">{{pet.description}}</p>
                                                         </div>
@@ -163,12 +165,13 @@
                                         {% for caregiver in caregivers %}
                                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">
-                                                <a href="topics-detail.html">
+                                                <a href="giver-details.html">
                                                     <div class="d-flex">
                                                         <div>
                                                             <h5 class="mb-2">
                                                                 {{caregiver.full_name}}
                                                             </h5>
+                                                            <p class="text-muted">📍{{caregiver.location}}</p>
 
                                                             <p class="mb-0">{{caregiver.bio}}</p>
                                                         </div>
@@ -183,7 +186,7 @@
                                         </div>
                                   </div>
 
-                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
+                                {% comment %} <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
                                         <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">
                                                 <a href="topics-detail.html">
@@ -202,7 +205,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                     </div>
                 </div>
             </section>
